@@ -1,0 +1,238 @@
+.condition-page {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.condition-hero h2 {
+    font-size: 24px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #0F172A;
+    margin: 0;
+}
+
+.condition-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.condition-kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+    min-height: 98px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all .25s ease;
+    will-change: transform;
+}
+
+.condition-kpi-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(16,185,129,.05),
+        rgba(20,184,166,.03)
+    );
+    opacity: 0;
+    transition: .25s ease;
+}
+
+.condition-kpi-card:hover::before {
+    opacity: 1;
+}
+
+.condition-kpi-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(16,185,129,.18);
+}
+
+.condition-kpi-card:hover .condition-kpi-icon {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.condition-kpi-card > div:not(.condition-kpi-icon) {
+    position: relative;
+    z-index: 1;
+}
+
+.condition-kpi-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+    font-size: 16px;
+
+    transition: .25s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.condition-kpi-icon.emerald {
+    color: #10B981;
+    background: rgba(16,185,129,.12);
+}
+
+.condition-kpi-icon.teal {
+    color: #14B8A6;
+    background: rgba(20,184,166,.12);
+}
+
+.condition-kpi-icon.amber {
+    color: #F59E0B;
+    background: rgba(245,158,11,.12);
+}
+
+.condition-kpi-icon.blue {
+    color: #2563EB;
+    background: rgba(37,99,235,.12);
+}
+
+.condition-kpi-card span {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.condition-kpi-card h3 {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.condition-chart-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.condition-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 20px;
+    box-shadow: 0 12px 28px rgba(15,23,42,.04);
+    transition: .25s ease;
+}
+
+.condition-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(15,23,42,.06);
+}
+
+.condition-card-header {
+    margin-bottom: 18px;
+}
+
+.condition-card-header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    color: #1E293B;
+}
+
+.condition-chart-box {
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+
+.condition-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.condition-table thead {
+    background: #F8FAFC;
+}
+
+.condition-table th {
+    padding: 13px 16px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.condition-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-bottom: 1px solid #F1F5F9;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.condition-table tbody tr {
+    transition: background .2s ease;
+}
+
+.condition-table tbody tr:hover {
+    background: rgba(16,185,129,.035);
+}
+
+.condition-table tbody td:nth-child(3),
+.condition-table tbody td:nth-child(6) {
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.chart-grow {
+    animation: fadeUp .55s ease both;
+}
+
+.condition-hero,
+.condition-kpi-card,
+.condition-card {
+    animation: fadeUp .55s ease both;
+}
+
+.condition-kpi-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.condition-kpi-card:nth-child(2) {
+    animation-delay: .10s;
+}
+
+.condition-kpi-card:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.condition-kpi-card:nth-child(4) {
+    animation-delay: .20s;
+}
+
+.condition-chart-grid {
+    animation: fadeUp .55s ease both;
+    animation-delay: .25s;
+}
